@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="bg-gray-800  shadow-lg py-5 px-7">
+  <nav class="flex justify-between">
+    <div class="flex items-center space-x-3 lg:pr-16 pr-6">
+      <img class="cursor-pointer bg-white p-1 rounded-full" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/header-1-svg1.svg" alt="circle" />
+      <h2 class="font-normal text-2xl leading-6 text-white">Emporify</h2>
+    </div>
+    <div class=" w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex  p-4 mt-4 rounded-lg   md:space-x-8 md:mt-0 md:border-0 ">
+        <li>
+          <a th:href="@{/allcompanies}" class="block py-2 pl-3 pr-4 text-white  rounded " aria-current="page">Company</a>
+        </li>
+        <li>
+          <a th:href="@{/allemployees}" class="block py-2 pl-3 pr-4 text-white  rounded " aria-current="page">Employees</a>
+        </li> <li>
+        <a th:href="@{/alljobs}" class="block py-2 pl-3 pr-4 text-white  rounded " aria-current="page">Jobs</a>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<table class="table">
+  <tr>
+    <th scope="col" class="px-6 py-3">
+      ID
+    </th>
+    <th scope="col" class="px-6 py-3">
+      Title
+    </th>
+    <th scope="col" class="px-6 py-3">
+      Description
+    </th>
+    <th scope="col" class="px-6 py-3">
+      Salary
+    </th>
+    <th scope="col" class="px-6 py-3">
+      JobType
+    </th>
+
+    <th scope="col" class="px-6 py-3">
+      LocalDate
+    </th>
+    <th scope="col" class="px-6 py-3">
+      ExperienceLevel
+    </th>
+    <th scope="col" class="px-6 py-3">
+      status
+    </th>
+
+    <th scope="col" class="px-6 py-3">
+      Company
+    </th>
+
+    <th scope="col" class="px-6 py-3">
+      <span class="sr-only">Edit</span>
+    </th>
+    <th scope="col" class="px-6 py-3">
+      <span class="sr-only">Delete</span>
+    </th>
+  </tr>
+
+  <tr>
+    <td th:text="${job.id}"></td>
+    <td th:text="${job.title}"></td>
+    <td th:text="${job.descritpion}"></td>
+    <td th:text="${job.salary}"></td>
+    <td th:text="${job.jobType}"></td>
+    <td th:text="${job.datePosted}"></td>
+    <td th:text="${job.experienceLevel}"></td>
+    <td th:text="${job.experienceLevel}"></td>
+    <td th:text="${job.company.name}"></td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

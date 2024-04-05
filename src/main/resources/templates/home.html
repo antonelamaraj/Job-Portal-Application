@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
+    <title>EMPORIFY</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-logo">
+        <a href="#">
+            <span>C</span>ode<span>A</span>nd<span>C</span>reate
+        </a>
+    </div>
+    <div class="nav-list">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About Us</a>
+        <a href="#" class="nav-link">Companies</a>
+        <a href="#" class="nav-link">Employess</a>
+        <a href="#" class="nav-link">Jobs</a>
+        <a href="#" class="nav-link">Contact Us</a>
+    </div>
+</nav>
+<!-- End of Navbar -->
+
+<!-- Menu -->
+<div class="menu">
+    <div class="line line-1"></div>
+    <div class="line line-2"></div>
+    <div class="line line-3"></div>
+</div>
+<!-- End of Menu -->
+
+<div class="container">
+    <!-- Section 1 -->
+    <!-- Section 1 -->
+    <section class="section-1" id="home">
+        <div class="banner">
+            <h1 class="banner-heading">
+                <span class="heading-1">Java</span>
+                <span class="heading-2">HTML & CSS</span>
+                <span class="heading-3">JavaScript</span>
+                <span class="heading-4">Sql Oracle</span>
+            </h1>
+            <p class="banner-paragraph">Sharing the fascinating art of coding!</p>
+            <button class="banner-btn">Discover Your Future JOB </button>
+        </div>
+    </section>
+    <!-- End of Section 1 -->
+
+    <!-- Section 2 -->
+    <section class="section-2" id="about-us">
+        <h1 class="section-heading">About Us</h1>
+        <div class="section-heading-line"></div>
+        <p class="section-2-paragraph">
+            <i class="fas fa-quote-left"></i>
+            Programming is important to innovate and create eco-friendly solutions for global problems. It is important in our daily life to enhance and increase the power of computers and the internet.
+            Programming helps in speeding up the input and output processes in a machine. It is important to automate, collect, manage, calculate, and analyze the processing of data and information accurately. Programming helps create software and applications that help computer and mobile users in daily life.
+            <i class="fas fa-quote-right"></i>
+        </p>
+    </section>
+    <!-- End of Section 2 -->
+
+
+
+    <!-- Section 3 -->
+    <section class="section-">
+        <table class="table">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    ID
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Nipt
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Website
+                </th>
+
+                <th scope="col" class="px-6 py-3">
+                    Open At
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Nr Of Employees
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Description
+                </th>
+
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Edit</span>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Delete</span>
+                </th>
+            </tr>
+
+            <tr>
+                <td th:text="${company.id}"></td>
+                <td th:text="${company.name}"></td>
+                <td th:text="${company.nipt}"></td>
+                <td th:text="${company.category}"></td>
+                <td th:text="${company.website}"></td>
+                <td th:text="${company.openAt}"></td>
+                <td th:text="${company.nrOfEmployees}"></td>
+                <td th:text="${company.description}"></td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+        </table>
+    </section>
+    <!-- End of Section 3 -->
+
+
+
+
+    <!-- Section 4 -->
+    <section class="section-4" id="contact">
+        <h1 class="section-heading">Contact Us</h1>
+        <div class="section-heading-line"></div>
+        <div class="contact-wrapper">
+            <div class="contact-details">
+                <div class="phone">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Phone</h3>
+                    <p>068 20 20 355</p>
+                    <p>068 30 30 123</p>
+                </div>
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>Main street #123</p>
+                    <p>Wall street #123</p>
+                </div>
+                <div class="email">
+                    <i class="far fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>marajantonela@gmail.com</p>
+                    <p>arberlulashi@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <h2 class="text-center mb-4">Contact Us</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Section 4 -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#exercises">Exercises</a>
+            <a href="#contact-us">Contact Us</a>
+        </div>
+        <p class="copyright">Copyright &copy; CodeAndCreate All Rights Reserved</p>
+    </footer>
+    <!-- End of Footer -->
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="../static/script.js"></script>
+</body>
+</html>
